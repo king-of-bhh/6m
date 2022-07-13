@@ -178,7 +178,7 @@ function render() {
     particles = [];
     //
     text = new Text({
-        copy: 'Anh Yêu Em!'
+        copy: 'I will be there'
     });
     canvas.addEventListener('click', (e) => {
         const x = e.clientX;
