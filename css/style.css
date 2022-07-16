@@ -1,36 +1,56 @@
-.page-laser-to-text {
-	position: relative;
-	overflow: hidden;
+#loader {
+  margin-top:25%;
+  display:block;
+}
+#text {
+  display:none;
+ margin-top:35%;
+}
 
-	canvas {
-		display: block;
-	}
+* {
+  text-align:center;
+  color:rgba(0,255,0,1);
+  animation: fade 5s linear infinite;
+}
+@keyframes fade {
+  0%{color:rgba(0,255,0,1);}
+  50%{color:rgba(0,255,0,0);}
+}
 
-	input {
-		position: absolute;
-		bottom: 50px;
-		left: 0;
-		right: 0;
-		display: block;
-		outline: none;
-		background-color: rgba(38, 50, 56, 0.2);
-		color: #ffffff;
-		border: none;
-		width: 50%;
-		min-width: 500px;
-		max-width: 100%;
-		margin: auto;
-		height: 60px;
-		line-height: 60px;
-		font-size: 40px;
-		padding: 0 20px;
-
-		&:hover, &:focus {
-			border: 1px solid rgba(38, 50, 56, 0.6);
-		}
-
-		&::-webkit-input-placeholder {
-			color: rgba(#ffffff, 0.1);
-		}
-	}
+body {
+  font-family:"Audiowide";
+  background-color: rgb(40,40,40);
+  height: 100%;
+  width: 100%;
+}
+.outer {
+  margin: auto;
+  border: 16px solid rgba(0,0,0,0); 
+  border-top: 16px solid rgb(255,255,0); 
+  border-bottom: 16px solid rgb(255,255,0);
+  border-radius: 50%;
+  border-style: double;
+  width: 150px;
+  height: 150px;
+  animation: spin 5s linear infinite;
+  
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.inner {
+  margin:auto;
+  border: 15px solid rgba(0,0,0,0); 
+  border-top: 15px solid rgb(0,255,255);
+  border-bottom: 15px solid rgb(0,255,255);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin2 1.5s linear infinite;
+  
+}
+@keyframes spin2 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
 }
